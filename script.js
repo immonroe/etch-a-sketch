@@ -1,11 +1,10 @@
 const gridContainer = document.querySelector('.gridContainer');
 const gridPrompt = document.querySelector('.gridPrompt');
 
-// button to change gridsize and start grid generation 
+
 const gridButton = document.querySelector('.gridButton');
 gridButton.addEventListener('click', () => {
-    let gridSize = prompt("How many squares wide would you like the grid to be?");
-    // error prompt conditionals
+    let gridSize = prompt("Choose the size of your grid: you can choose any number between 1 and 100!");
     while (gridSize > 100 || gridSize < 1 || isNaN(gridSize)) {
         if (isNaN(gridSize)) {
             gridSize = prompt("Only numbers are supported\nplease pick a number between 1 and 100");
