@@ -1,18 +1,3 @@
-// const container = document.getElementById("container");
-
-
-// function makeRows(rows, cols) {
-//   container.style.setProperty('--grid-rows', rows);
-//   container.style.setProperty('--grid-cols', cols);
-//   for (c = 0; c < (rows * cols); c++) {
-//     let cell = document.createElement("div");
-//     // cell.innerText = (c + 1); if I wanted to include numbers for each box in the CSS grid
-//     container.appendChild(cell).className = "grid-item";
-//   };
-// };
-
-// makeRows(16, 16);
-
 const gridContainer = document.querySelector('.gridContainer');
 const gridPrompt = document.querySelector('.gridPrompt');
 
@@ -21,13 +6,13 @@ const gridButton = document.querySelector('.gridButton');
 gridButton.addEventListener('click', () => {
     let gridSize = prompt("How many squares wide would you like the grid to be?");
     // error prompt conditionals
-    while (gridSize > 100 || gridSize < 2 || isNaN(gridSize)) {
+    while (gridSize > 100 || gridSize < 1 || isNaN(gridSize)) {
         if (isNaN(gridSize)) {
-            gridSize = prompt("Only numbers are supported\nplease pick a number between 2 and 100");
+            gridSize = prompt("Only numbers are supported\nplease pick a number between 1 and 100");
         } else if (gridSize === null) { //cancel button
             break;
         } else {
-            gridSize = prompt("Please pick a number between 2 and 100");
+            gridSize = prompt("Please pick a number between 1 and 100");
         }
     }
 
@@ -56,7 +41,7 @@ function fillColor() {
     const squares = document.querySelectorAll('.squares');
     squares.forEach(squares => {
         squares.addEventListener('mouseenter', () => {      
-            squares.style.backgroundColor = 'pink';
+            squares.style.backgroundColor = '#D4A276';
         });
     });
 }
