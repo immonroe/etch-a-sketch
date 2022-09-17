@@ -1,6 +1,7 @@
-const gridContainer = document.querySelector('.gridContainer');
+const grid = document.querySelector('.grid');
 const gridPrompt = document.querySelector('.gridPrompt');
-
+const rainbowButton = document.getElementById('rainbowButton')
+const clearButton = document.getElementById('clearButton')
 
 const gridButton = document.querySelector('.gridButton');
 gridButton.addEventListener('click', () => {
@@ -19,7 +20,7 @@ gridButton.addEventListener('click', () => {
 });
 
 function gridGenerator(gridWidth) {
-    removeSquares(gridContainer)
+    removeSquares(grid)
 
     for (let i = 0; i < (gridWidth * gridWidth); i++) {
         let sides = 640/gridWidth + "px";
@@ -29,7 +30,7 @@ function gridGenerator(gridWidth) {
          squares.style.width = sides;
          squares.style.height = sides;
          // appends the generated divs/squares
-        gridContainer.appendChild(squares);
+        grid.appendChild(squares);
     }
     fillColor();
 }
