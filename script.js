@@ -8,10 +8,10 @@ gridButton.addEventListener('click', () => {
     while (gridSize > 100 || gridSize < 1 || isNaN(gridSize)) {
         if (isNaN(gridSize)) {
             gridSize = prompt("Only numbers are supported\nplease pick a number between 1 and 100");
-        } else if (gridSize === null) { //cancel button
+        } else if (gridSize === null) {
             break;
         } else {
-            gridSize = prompt("Please pick a number between 1 and 100");
+            gridSize = prompt("An error has occured. Please pick a number between 1 and 100");
         }
     }
 
@@ -19,9 +19,8 @@ gridButton.addEventListener('click', () => {
 });
 
 function gridGenerator(gridWidth) {
-    // empty if squares are already present
     removeSquares(gridContainer)
-    // generate squares
+
     for (let i = 0; i < (gridWidth * gridWidth); i++) {
         let sides = 640/gridWidth + "px";
         const squares = document.createElement('div');
