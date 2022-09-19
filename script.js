@@ -1,7 +1,18 @@
-const grid = document.querySelector('.grid');
+const DEFAULT_COLOR = 'black'
+const DEFAULT_MODE = 'default'
+const DEFAULT_SIZE = 16
+
+let currentColor = DEFAULT_COLOR
+let currentMode = DEFAULT_MODE
+let currentSize = DEFAULT_SIZE
+
+
+
+const grid = document.getElementById('grid');
 const gridPrompt = document.querySelector('.gridPrompt');
 const rainbowButton = document.getElementById('rainbowButton')
 const clearButton = document.getElementById('clearButton')
+const defaultButton = document.getElementById('defaultButton')
 
 const gridButton = document.querySelector('.gridButton');
 gridButton.addEventListener('click', () => {
@@ -26,10 +37,8 @@ function gridGenerator(gridWidth) {
         let sides = 640/gridWidth + "px";
         const squares = document.createElement('div');
         squares.classList.add('squares');     
-         //css to change width and height
          squares.style.width = sides;
          squares.style.height = sides;
-         // appends the generated divs/squares
         grid.appendChild(squares);
     }
     fillColor();
