@@ -2,12 +2,18 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
-    color: #D4A276;
+    color: black;
     font-size: 30px;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.header {
+  font-size: 2em;
+  margin: 20px 10px 0px 10px;
+  font-weight: 700;
 }
 
 button {
@@ -16,7 +22,7 @@ button {
     text-transform: uppercase;
     border-radius: 4px;
     border: 2px solid;
-    background-color: #D4A276;
+    background-color: black;
     color: white;
     font-size: 20px;
     font-weight: 800;
@@ -25,7 +31,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  transform: scale(1.25);
+  transform: scale(1.1);
 }
 
 /* Rainbow button effect */
@@ -48,16 +54,10 @@ button:hover {
   }
 }
 
-.header {
-    font-size: 1.5em;
-    margin: 20px 10px 0px 10px;
-    font-weight: 700;
-}
-
 .grid {
     outline: 2px;
     outline-style: solid;
-    outline-color: #D4A276;
+    outline-color: black;
     width: 640px;
     height: 640px;
     margin: 10px;

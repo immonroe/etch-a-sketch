@@ -40,7 +40,7 @@ function fillColor() {
     const squares = document.querySelectorAll('.squares');
     squares.forEach(squares => {
         squares.addEventListener('mouseenter', () => {      
-            squares.style.backgroundColor = '#D4A276';
+            squares.style.backgroundColor = 'black';
         });
     });
 }
