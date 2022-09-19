@@ -77,9 +77,10 @@ button:hover {
 .footer {
   font-size: 0.4em;
   text-decoration: none;
-  font: black;
+  color: black;
 }
 
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none; 
+a {
+  text-decoration: none;
+  color: black;
 }

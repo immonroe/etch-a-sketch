@@ -1,18 +1,12 @@
-const DEFAULT_COLOR = 'black'
-const DEFAULT_MODE = 'default'
-const DEFAULT_SIZE = 16
-
-let currentColor = DEFAULT_COLOR
-let currentMode = DEFAULT_MODE
-let currentSize = DEFAULT_SIZE
-
-
-
 const grid = document.getElementById('grid');
 const gridPrompt = document.querySelector('.gridPrompt');
 const rainbowButton = document.getElementById('rainbowButton')
 const clearButton = document.getElementById('clearButton')
 const defaultButton = document.getElementById('defaultButton')
+
+defaultButton.onclick = () => setCurrentMode('default')
+rainbowButton.onclick = () => setCurrentMode('rainbow')
+clearButton.onclick = () => reloadGrid()
 
 const gridButton = document.querySelector('.gridButton');
 gridButton.addEventListener('click', () => {
@@ -50,15 +44,31 @@ function fillColor() {
     squares.forEach(squares => {
         squares.addEventListener('mouseenter', () => {      
             squares.style.backgroundColor = 'black';
+
         });
     });
 }
 
-//function to empty existing squares before setting a new grid size
+
+// function to empty existing squares before setting a new grid size
 function removeSquares(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
+}
+
+function activateButton(newMode) {
+  if (currentMode === 'rainbow') {
+    rainbowButton.classList.remove('active')
+  } else if (currentMode === 'default') {
+    colorButton.classList.remove('active')
+  }
+
+  if (newMode === 'rainbow') {
+    rainbowButton.classList.add('active')
+  } else if (newMode === 'default') {
+    defaultButton.classList.add('active')
+  }
 }
 
 gridGenerator(16);
