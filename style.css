@@ -35,9 +35,9 @@ button {
     width: 640px;
     height: 640px;
     margin: 10px;
-    
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 5px 10px 8px 2px #888888
 }
 
 /* class added via JS DOM manipulation */
