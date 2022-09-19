@@ -22,6 +22,26 @@ button {
     font-weight: 800;
 }
 
+/* Rainbow button effect */
+#rainbowButton {
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:5px;
+}
+
+#rainbowButton:after {
+  content:attr(alt);
+}
+
+#rainbowButton:hover {
+  animation:slidebg 4s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
 .header {
     font-size: 1.5em;
     margin: 20px 10px 0px 10px;
