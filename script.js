@@ -4,6 +4,8 @@ const rainbowButton = document.getElementById('rainbowButton')
 const clearButton = document.getElementById('clearButton')
 const defaultButton = document.getElementById('defaultButton')
 
+// Set toggle funciton so that when a button is pressed, the mode is 'activated' and a condition is met
+
 defaultButton.onclick = () => setCurrentMode('default')
 rainbowButton.onclick = () => setCurrentMode('rainbow')
 clearButton.onclick = () => reloadGrid()
