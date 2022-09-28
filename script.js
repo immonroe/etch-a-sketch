@@ -1,3 +1,4 @@
+// global variable
 let color = 'black'
 
 // creates 16 x 16 grid
@@ -29,15 +30,22 @@ function changeSize(input) {
   }
 }
 
+// color selection
+// color === 'rainbow'... needs triple === or else it will always be random
 function colorSquare() {
-  if(color = 'rainbow') {
+  if(color === 'rainbow') {
     this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-  }
-  else {
+  } else {
     this.style.backgroundColor = color;
   }
 }
 
 function changeColor(choice) {
   color = choice;
+}
+
+function resetBoard() {
+  let board = document.querySelector('.board');
+  let squares = board.querySelectorAll('div');
+  squares.forEach((div) => div.style.backgroundColor = 'white');
 }
