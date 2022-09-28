@@ -8,7 +8,10 @@ function populateBoard(size) {
   
   let amount = size * size;
   for (let i = 0; i < amount; i++) {
-    let square = document.createElement('div')
+    let square = document.createElement('div');
+    square.addEventListener('mouseover', () => {
+      square.style.backgroundColor = 'black';
+    });
     square.style.backgroundColor = 'blue';
     board.insertAdjacentElement('beforeend', square);
   }
