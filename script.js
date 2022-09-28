@@ -1,3 +1,5 @@
+let color = 'black'
+
 // creates 16 x 16 grid
 function populateBoard(size) {
   let board = document.querySelector('.board');
@@ -9,15 +11,13 @@ function populateBoard(size) {
   let amount = size * size;
   for (let i = 0; i < amount; i++) {
     let square = document.createElement('div');
-    square.addEventListener('mouseover', () => {
-      square.style.backgroundColor = 'black';
-    });
-    square.style.backgroundColor = 'blue';
+    square.addEventListener('mouseover', colorSquare);
+    square.style.backgroundColor = 'white';
     board.insertAdjacentElement('beforeend', square);
   }
 }
 
-populateBoard(16);
+populateBoard(16); // defaults to 16x16 on startup
 
 // changes size of board
 function changeSize(input) {
@@ -27,4 +27,12 @@ function changeSize(input) {
   else {
     console.log('invalid input, please select a number between 1 and 100.');
   }
+}
+
+function colorSquare() {
+  this.style.backgroundColor = color;
+}
+
+function changeColor(choice) {
+  color = choice;
 }
