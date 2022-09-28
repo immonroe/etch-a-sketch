@@ -1,5 +1,6 @@
-// global variable
+// global variables
 let color = 'black'
+let click = true;
 
 // creates 16 x 16 grid
 function populateBoard(size) {
@@ -32,11 +33,14 @@ function changeSize(input) {
 
 // color selection
 // color === 'rainbow'... needs triple === or else it will always be random
+
 function colorSquare() {
-  if(color === 'rainbow') {
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-  } else {
-    this.style.backgroundColor = color;
+  if (click) {
+    if(color === 'rainbow') {
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+      this.style.backgroundColor = color;
+    }
   }
 }
 
@@ -49,3 +53,7 @@ function resetBoard() {
   let squares = board.querySelectorAll('div');
   squares.forEach((div) => div.style.backgroundColor = 'white');
 }
+
+document.querySelector('body').addEventListener('click', () => {
+  click = !click; // Using boolean statement to toggle click feature
+});
