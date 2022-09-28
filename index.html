@@ -21,7 +21,11 @@
                     <button>Reset</button>
                 </div>
                 <div>
-                    <input type="text" placeholder="Size of Board" value="16">
+                    <input 
+                    type="text" 
+                    placeholder="Size of Board" 
+                    value="16" 
+                    onchange="changeSize(this.value)"> <!-- this.value will be whatever was typed into the input field -->
                     <button>Set Size</button>
                 </div>
             </div>
