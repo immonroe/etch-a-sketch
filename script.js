@@ -52,7 +52,7 @@ function resetBoard() {
   squares.forEach((div) => div.style.backgroundColor = 'white');
 }
 
-document.querySelector('body').addEventListener('click', () => {
+document.querySelector('.board').addEventListener('click', () => {
   click = !click; // Using boolean statement to toggle click feature
   if(click) {
     document.querySelector('.mode').textContent = 'Mode: Coloring';
