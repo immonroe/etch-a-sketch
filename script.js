@@ -32,8 +32,6 @@ function changeSize(input) {
 }
 
 // color selection
-// color === 'rainbow'... needs triple === or else it will always be random
-
 function colorSquare() {
   if (click) {
     if(color === 'rainbow') {
@@ -56,4 +54,9 @@ function resetBoard() {
 
 document.querySelector('body').addEventListener('click', () => {
   click = !click; // Using boolean statement to toggle click feature
+  if(click) {
+    document.querySelector('.mode').textContent = 'Mode: Coloring';
+  } else {
+    document.querySelector('.mode').textContent = 'Mode: Not Coloring';
+  }
 });
