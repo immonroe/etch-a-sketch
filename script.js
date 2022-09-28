@@ -24,10 +24,10 @@ populateBoard(16); // defaults to 16x16 on startup
 // changes size of board
 function changeSize(input) {
   if (input >= 1 && input <= 100){
+    document.querySelector('.error').style.display = 'none';
     populateBoard(input);
-  }
-  else {
-    console.log('invalid input, please select a number between 1 and 100.');
+  } else {
+    document.querySelector('.error').style.display = 'flex';
   }
 }
 

@@ -10,16 +10,12 @@ body {
   align-items: center;
 }
 
-.header {
-  padding-top: 50px;
-}
-
 .title {
   font-size: 4rem;
   font-weight: 700;
   display: flex;
   justify-content: center;
-  padding: 15px 0;
+  padding: 50px 0 10px;
 }
 
 .mode {
