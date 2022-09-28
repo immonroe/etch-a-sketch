@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script ></script>
     <title>Etch-A-Sketch</title>
@@ -15,20 +18,22 @@
             <div class="mode">Mode: Coloring</div>
             <div class="content">
                 <div class="board"></div>
-                <div class="buttons">
-                    <button onclick="changeColor('black')">Black</button>
-                    <button onclick="changeColor('white')">Eraser</button>
-                    <button onclick="changeColor('gray')">Gray</button>
-                    <button onclick="changeColor('rainbow')">Rainbow</button>
-                    <button onclick="resetBoard()">Reset</button>
+                <div class="options">
+                    <div class="buttons">
+                        <button onclick="changeColor('black')">Black</button>
+                        <button onclick="changeColor('white')">Eraser</button>
+                        <!-- <button onclick="changeColor('shade')">Shade</button> -->
+                        <button onclick="changeColor('rainbow')">Rainbow</button>
+                        <button onclick="resetBoard()">Reset</button>
+                    </div>
+                    <div>
+                        <input 
+                        type="text" 
+                        placeholder="Size of Board" 
+                        value="16" 
+                        onchange="changeSize(this.value)"> <!-- this.value will be whatever was typed into the input field -->
+                        <button>Set Size</button>
                 </div>
-                <div>
-                    <input 
-                    type="text" 
-                    placeholder="Size of Board" 
-                    value="16" 
-                    onchange="changeSize(this.value)"> <!-- this.value will be whatever was typed into the input field -->
-                    <button>Set Size</button>
                 </div>
             </div>
         </div>

@@ -36,7 +36,14 @@ function colorSquare() {
   if (click) {
     if(color === 'rainbow') {
       this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    } else {
+    }
+    
+  // Work in progress
+  //   else if(color === 'shade') {
+  //     this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
+  // }
+    
+    else {
       this.style.backgroundColor = color;
     }
   }

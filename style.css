@@ -1,3 +1,31 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.mode {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+/* .content {
+  display: flex;
+  justify-content: center;
+} */
+
+.options {
+  display: flex;
+}
+
 .board {
   height: 500px;
   width: 500px;
