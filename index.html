@@ -14,10 +14,12 @@
 </head>
     <body>
         <div class="flex-container">
-            <div class="title"><h1>Etch-A-Sketch</h1></div>
-            <div class="mode">Mode: Coloring</div>
+            <div class="header">
+                <div class="title"><h1>Etch-A-Sketch</h1></div>
+                <div class="mode">Mode: Coloring</div>
+            </div>
             <div class="content">
-                <div class="options">
+                <div class="settings">
                     <div class="buttons">
                         <button class="blackButton" onclick="changeColor('black')">Black</button>
                         <button class="whiteButton" onclick="changeColor('white')">Eraser</button>
@@ -25,7 +27,7 @@
                         <button class="rainbowButton" onclick="changeColor('rainbow')">Rainbow</button>
                         <button class="resetButton" onclick="resetBoard()">Reset</button>
                     </div>
-                    <div>
+                    <div class="input">
                         <input 
                         type="text" 
                         placeholder="Size of Board" 
@@ -33,10 +35,10 @@
                         onchange="changeSize(this.value)"> <!-- this.value will be whatever was typed into the input field -->
                         <button>Set Size</button>
                     </div>
-                    
                 </div>
                 <div class="board"></div>
             </div>
+            <footer></footer>
         </div>
     </body>
     <script src="script.js"></script>

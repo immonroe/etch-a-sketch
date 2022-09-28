@@ -10,6 +10,10 @@ body {
   align-items: center;
 }
 
+.header {
+  padding-top: 50px;
+}
+
 .title {
   font-size: 4rem;
   font-weight: 700;
@@ -25,8 +29,38 @@ body {
   justify-content: center;
 }
 
+.content {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  padding: 60px 20px 0;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;
+  padding-bottom: 300px;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  line-height: 30px;
+}
+
+.input {
+  display: inline;
+  line-height: 40px;
+  align-items: center;
+}
+
 button {
   padding: 10px 20px;
+  width: 150px;
   margin: 10px;
   text-transform: uppercase;
   border-radius: 4px;
@@ -34,8 +68,11 @@ button {
   background-color: black;
   color: white;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   transition: .2s ease-in-out 0s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button:hover {
@@ -67,10 +104,10 @@ to {
   outline: 2px;
   outline-style: solid;
   outline-color: black;
-  width: 640px;
-  height: 640px;
+  width: 500px;
+  height: 500px;
   margin: 10px;
   display: grid;
   flex-wrap: wrap;
-  box-shadow: 5px 10px 8px 2px #888888
+  box-shadow: 5px 10px 8px 2px #888888;
 }
