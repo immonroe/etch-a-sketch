@@ -17,14 +17,13 @@
             <div class="title"><h1>Etch-A-Sketch</h1></div>
             <div class="mode">Mode: Coloring</div>
             <div class="content">
-                <div class="board"></div>
                 <div class="options">
                     <div class="buttons">
-                        <button onclick="changeColor('black')">Black</button>
-                        <button onclick="changeColor('white')">Eraser</button>
-                        <!-- <button onclick="changeColor('shade')">Shade</button> -->
-                        <button onclick="changeColor('rainbow')">Rainbow</button>
-                        <button onclick="resetBoard()">Reset</button>
+                        <button class="blackButton" onclick="changeColor('black')">Black</button>
+                        <button class="whiteButton" onclick="changeColor('white')">Eraser</button>
+                        <!-- <button class="shadeButton" onclick="changeColor('shade')">Shade</button> -->
+                        <button class="rainbowButton" onclick="changeColor('rainbow')">Rainbow</button>
+                        <button class="resetButton" onclick="resetBoard()">Reset</button>
                     </div>
                     <div>
                         <input 
@@ -33,8 +32,10 @@
                         value="16" 
                         onchange="changeSize(this.value)"> <!-- this.value will be whatever was typed into the input field -->
                         <button>Set Size</button>
+                    </div>
+                    
                 </div>
-                </div>
+                <div class="board"></div>
             </div>
         </div>
     </body>
