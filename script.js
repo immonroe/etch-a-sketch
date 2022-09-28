@@ -18,5 +18,10 @@ populateBoard(16);
 
 // changes size of board
 function changeSize(input) {
-  populateBoard(input)
+  if (input < 0 && input > 100){
+    populateBoard(input);
+  }
+  else {
+    console.log('invalid input, please select a number between 1 and 100.');
+  }
 }
