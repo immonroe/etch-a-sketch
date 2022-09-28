@@ -18,7 +18,7 @@ populateBoard(16);
 
 // changes size of board
 function changeSize(input) {
-  if (input < 0 && input > 100){
+  if (input >= 1 && input <= 100){
     populateBoard(input);
   }
   else {
