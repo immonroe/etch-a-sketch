@@ -28,16 +28,14 @@
                         <button class="resetButton" onclick="resetBoard()">Reset</button>
                     </div>
                     <div class="input">
-                        <input 
-                        type="text" 
-                        placeholder="Size of Board" 
-                        value="16" 
-                        onchange="changeSize(this.value)"> <!-- this.value will be whatever was typed into the input field -->
+                        <input
+                        type="text"
+                        placeholder="Size of Board"
+                        value="16"
+                        onchange="changeSize(this.value)"/> <!-- this.value will be whatever was typed into the input field -->
                         <button>Set Size</button>
                     </div>
-                    <div class="error">
-                        Error: Number must be between 1 and 100.
-                    </div>
+                    <div class="error">Error: Input must be between 1 and 100.</div>
                 </div>
                 <div class="board"></div>
             </div>
