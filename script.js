@@ -2,7 +2,7 @@
 let color = 'black'
 let click = true;
 
-// creates 16 x 16 grid
+// creates grid
 function populateBoard(size) {
   let board = document.querySelector('.board');
   let squares = board.querySelectorAll('div');
@@ -23,11 +23,12 @@ populateBoard(16); // defaults to 16x16 on startup
 
 // changes size of board
 function changeSize(input) {
-  if (input >= 1 && input <= 100){
+  if (input >= 1 && input <= 100) {
     document.querySelector('.error').style.display = 'none';
     populateBoard(input);
   } else {
     document.querySelector('.error').style.display = 'flex';
+    console.log('too many/little squares'); // works properly with console.log but has issues on startup with queryselector
   }
 }
 
@@ -36,14 +37,10 @@ function colorSquare() {
   if (click) {
     if(color === 'rainbow') {
       this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    }
-    
-  // Work in progress
-  //   else if(color === 'shade') {
-  //     this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
-  // }
-    
-    else {
+    } else if(color === 'shade') {
+      let currentOpacity = 
+      this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
+  } else {
       this.style.backgroundColor = color;
     }
   }
