@@ -44,7 +44,7 @@ function colorSquare() {
       if (currentOpacity < 1) {
       currentOpacity = parseFloat(currentOpacity) + 0.1;
       this.setAttribute('data-opacity', currentOpacity); // value came back as string, had to concatonate strings for incrementation by converting to interger using parseFloat (parseInt drop decimal)
-      console.log(currentOpacity);
+      // console.log(currentOpacity);
 
       this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity})`; // Setting color for the new value
     }
