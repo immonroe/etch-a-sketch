@@ -38,13 +38,16 @@ function colorSquare() {
     if(color === 'rainbow') {
       this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else if(color === 'shade') {
+      
+      // if current opacity is less than 1, run the following function
       let currentOpacity = this.getAttribute('data-opacity') || 0; // Grabbed opacity on current square/div or defualted value to zero
-
+      if (currentOpacity < 1) {
       currentOpacity = parseFloat(currentOpacity) + 0.1;
       this.setAttribute('data-opacity', currentOpacity); // value came back as string, had to concatonate strings for incrementation by converting to interger using parseFloat (parseInt drop decimal)
-      // console.log(currentOpacity);
+      console.log(currentOpacity);
 
       this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity})`; // Setting color for the new value
+    }
   } else {
       this.style.backgroundColor = color;
     }
