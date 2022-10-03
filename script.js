@@ -19,7 +19,7 @@ function populateBoard(size) {
   }
 }
 
-populateBoard(16); // defaults to 16x16 on startup
+// populateBoard(16);
 
 // changes size of board
 function changeSize(input) {
@@ -31,6 +31,8 @@ function changeSize(input) {
     console.log('too many/little squares'); // works properly with console.log but has issues on startup with queryselector
   }
 }
+
+changeSize(16); // defaults to 16x16 on startup
 
 // color selection
 function colorSquare() {

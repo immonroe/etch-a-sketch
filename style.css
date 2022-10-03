@@ -12,8 +12,8 @@ body {
 }
 
 .flex-container {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,4 +120,31 @@ animation:slidebg 4s linear infinite;
 to {
   background-position:20vw;
 }
+}
+
+@media (max-width: 760px) {
+  .content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  @media (max-width: 528px) {
+    .board {
+      width: 320px;
+      height: 320px;
+    }
+
+    .title {
+      font-size: 2.8rem;
+    }
+  }
+  @media (max-width: 392px) {
+    .board {
+      width: 270px;
+      height: 270px;
+    }
+
+    .title {
+      font-size: 2.25rem;
+    }
+  }
 }
