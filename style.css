@@ -5,16 +5,13 @@ body {
   color: black;
   font-size: 30px;
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background-color: #cecdcd;
 }
 
 .flex-container {
-  height: auto;
-  width: auto;
-  display: flex;
+  height: 100vh;
+  width: 100vw;
   flex-direction: column;
   align-items: center;
 }
@@ -33,17 +30,23 @@ body {
 
 .content {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
   flex-direction: row;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
+}
+
+.header {
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
 }
 
 .title {
   font-size: 4rem;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
-  padding: 30px 0 10px;
 }
 
 .mode {
@@ -121,3 +124,56 @@ to {
   background-position:20vw;
 }
 }
+
+/* media queries */
+
+@media (max-width: 1200px) {
+  .content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .board {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 675px) {
+  .board {
+    height: 400px;
+    width: 400px;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+  
+  button {
+    padding: 7px 15px;
+    width: 125px;
+    margin: 7px;
+    font-size: 16px;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
+}
+
+
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
