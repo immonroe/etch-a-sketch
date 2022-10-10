@@ -34,7 +34,6 @@ body {
   justify-content: flex-start;
   gap: 50px;
   flex-direction: row;
-  /* padding: 10px 20px; */
 }
 
 .header {
