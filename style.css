@@ -31,7 +31,7 @@ body {
 .content {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 50px;
   flex-direction: row;
 }
@@ -126,7 +126,7 @@ to {
 
 /* media queries */
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .content {
     justify-content: center;
   }
