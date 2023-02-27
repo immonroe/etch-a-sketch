@@ -35,7 +35,7 @@ changeSize(16); // defaults to 16x16 on startup
 // color selection
 function colorSquare() {
   if (click) {
-    if(color === 'rainbow') {
+    if (color === 'rainbow') {
       this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else if(color === 'shade') {
       
