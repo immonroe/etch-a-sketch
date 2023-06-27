@@ -12,34 +12,34 @@
     <script ></script>
     <title>Etch-A-Sketch</title>
 </head>
-    <body>
-        <div class="flex-container">
-            <div class="header">
-                <div class="title"><h1>Etch-A-Sketch</h1></div>
-                <div class="mode">Mode: Coloring</div>
-            </div>
-            <div class="content">
-                <div class="settings">
-                    <div class="buttons">
-                        <button class="blackButton" onclick="changeColor('black')">Black</button>
-                        <button class="whiteButton" onclick="changeColor('white')">Eraser</button>
-                        <button class="shadeButton" onclick="changeColor('shade')">Shade</button>
-                        <button class="rainbowButton" onclick="changeColor('rainbow')">Rainbow</button>
-                        <button class="resetButton" onclick="resetBoard()">Reset</button>
-                    </div>
-                    <div class="input">
-                        <input
+<body>
+    <div class="flex-container">
+        <div class="header">
+            <div class="title"><h1>Etch-A-Sketch</h1></div>
+            <div class="mode">Mode: Coloring</div>
+        </div>
+        <div class="content">
+            <div class="settings">
+                <div class="buttons">
+                    <button class="blackButton" onclick="changeColor('black')">Black</button>
+                    <button class="whiteButton" onclick="changeColor('white')">Eraser</button>
+                    <button class="shadeButton" onclick="changeColor('shade')">Shade</button>
+                    <button class="rainbowButton" onclick="changeColor('rainbow')">Rainbow</button>
+                    <button class="resetButton" onclick="resetBoard()">Reset</button>
+                </div>
+                <div class="input">
+                    <input
                         type="text"
                         placeholder="Size of Board"
                         value="16"
                         onchange="changeSize(this.value)"/> <!-- this.value will be whatever was typed into the input field -->
-                        <button>Set Size</button>
-                    </div>
-                    <div class="error">Error: Input must be between 1 and 100.</div>
+                    <button onclick="setSize()">Set Size</button>
                 </div>
-                <div class="board"></div>
+                <div class="error">Error: Input must be between 1 and 100.</div>
             </div>
+            <div class="board"></div>
         </div>
-    </body>
+    </div>
+</body>
     <script src="script.js" defer></script>
 </html>
