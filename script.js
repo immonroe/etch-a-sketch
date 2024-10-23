@@ -1,8 +1,6 @@
-// global variables
 let color = 'black'
 let click = true;
 
-// creates grid
 function populateBoard(size) {
   let board = document.querySelector('.board');
   let squares = board.querySelectorAll('div');
@@ -19,7 +17,6 @@ function populateBoard(size) {
   }
 }
 
-// changes size of board
 function changeSize(input) {
   if (input >= 1 && input <= 100) {
     document.querySelector('.error').style.display = 'none';
@@ -32,7 +29,6 @@ function changeSize(input) {
 
 changeSize(16); // defaults to 16x16 on startup
 
-// color selection
 function colorSquare() {
   if (click) {
     if (color === 'rainbow') {
@@ -43,10 +39,9 @@ function colorSquare() {
       let currentOpacity = this.getAttribute('data-opacity') || 0; // Grabbed opacity on current square/div or defualted value to zero
       if (currentOpacity < 1) {
       currentOpacity = parseFloat(currentOpacity) + 0.1;
-      this.setAttribute('data-opacity', currentOpacity); // value came back as string, had to concatonate strings for incrementation by converting to interger using parseFloat (parseInt drop decimal)
-      // console.log(currentOpacity);
+      this.setAttribute('data-opacity', currentOpacity);
 
-      this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity})`; // Setting color for the new value
+      this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity})`;
     }
   } else {
       this.style.backgroundColor = color;
@@ -63,12 +58,3 @@ function resetBoard() {
   let squares = board.querySelectorAll('div');
   squares.forEach((div) => div.style.backgroundColor = 'white');  
 }
-
-document.querySelector('.board').addEventListener('click', () => {
-  click = !click; // Using boolean statement to toggle click feature
-  if(click) {
-    document.querySelector('.mode').textContent = 'Mode: Coloring';
-  } else {
-    document.querySelector('.mode').textContent = 'Mode: Not Coloring';
-  }
-});

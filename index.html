@@ -16,7 +16,6 @@
     <div class="flex-container">
         <div class="header">
             <div class="title"><h1>Etch-A-Sketch</h1></div>
-            <div class="mode">Mode: Coloring</div>
         </div>
         <div class="content">
             <div class="settings">
@@ -32,7 +31,7 @@
                         type="text"
                         placeholder="Size of Board"
                         value="16"
-                        onchange="changeSize(this.value)"/> <!-- this.value will be whatever was typed into the input field -->
+                        onchange="changeSize(this.value)"/>
                     <button onclick="setSize()">Set Size</button>
                 </div>
                 <div class="error">Error: Input must be between 1 and 100.</div>
